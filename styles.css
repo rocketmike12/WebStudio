@@ -81,7 +81,7 @@ body {
 }
 
 .hero {
-    background-color: #2F303A;
+    background-image: url(./img/img_17.png);
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -115,7 +115,6 @@ body {
 
 .features {
     padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 .features-list {
@@ -126,6 +125,28 @@ body {
 
 .features-list-item {
     width: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.features-list-item:nth-child(1)::before {
+    content: url(./img/img_18.png);
+    margin-bottom: 30px;
+}
+
+.features-list-item:nth-child(2)::before {
+    content: url(./img/img_19.png);
+    margin-bottom: 30px;
+}
+
+.features-list-item:nth-child(3)::before {
+    content: url(./img/img_20.png);
+    margin-bottom: 30px;
+}
+
+.features-list-item:nth-child(4)::before {
+    content: url(./img/img_21.png);
+    margin-bottom: 30px;
 }
 
 .features-list-title {
