@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     <!-- website header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container header-container">
             <a class="company-logo" href="./index.html">Web<span class="company-logo-header">Studio</span></a>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-list-item"><a href="./index.html" class="nav-list-link">Studio</a></li>
+                    <li class="nav-list-item"><a href="./index.html" class="nav-list-link current">Studio</a></li>
                     <li class="nav-list-item"><a href="./portfolio.html" class="nav-list-link">Portfolio</a></li>
                     <li class="nav-list-item"><a href="#" class="nav-list-link">Contacts</a></li>
                 </ul>
@@ -32,15 +32,30 @@
         <!-- modal -->
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button class="modal-btn-close" data-modal-close>X</button>
+                <button class="modal-btn-close" data-modal-close><svg class="modal-btn-close-svg" width="11px" height="11px"><use class="modal-btn-close-use" href="./symbol-defs.svg#icon-cross"></use></svg></button>
                 <h3 class="modal-title">Leave your details, we will call you back</h3>
                 <form class="modal-form">
                     <label for="" class="modal-form-label">Name</label>
-                    <input type="text" class="modal-form-input">
+                    <div class="modal-form-input-wrapper">
+                        <svg class="modal-form-input-svg" width="18px" height="18px">
+                            <use class="modal-form-input-use" href="./symbol-defs.svg#icon-name"></use>
+                        </svg>
+                        <input type="text" class="modal-form-input">
+                    </div>
                     <label for="" class="modal-form-label">Phone number</label>
-                    <input type="text" class="modal-form-input">
+                    <div class="modal-form-input-wrapper">
+                        <svg class="modal-form-input-svg" width="18px" height="18px">
+                            <use class="modal-form-input-use" href="./symbol-defs.svg#icon-phone"></use>
+                        </svg>
+                        <input type="text" class="modal-form-input">
+                    </div>
                     <label for="" class="modal-form-label">E-mail</label>
-                    <input type="text" class="modal-form-input">
+                    <div class="modal-form-input-wrapper">
+                        <svg class="modal-form-input-svg" width="18px" height="18px">
+                            <use class="modal-form-input-use" href="./symbol-defs.svg#icon-email"></use>
+                        </svg>
+                        <input type="text" class="modal-form-input">
+                    </div>
                     <label for="" class="modal-form-label">Comment</label>
                     <textarea name="" class="modal-form-textarea" placeholder="Enter the text"></textarea>
                     <input type="checkbox" class="modal-form-checkbox" required> 
@@ -284,8 +299,17 @@
                     <li class="address-list-item"><a href="tel:+380961111111" class="address-list-link">+38 096 111 11 11</a></li>
                 </ul>
             </address>
+            <div class="footer-join-wrapper">
+                <h3 class="footer-join">JOIN IN</h3>
+            </div>
         </div>
     </footer>
+    <script>
+        const header = document.getElementById('header');
+        const headerHeight = header.offsetHeight;
+        const body = document.getElementById('body');
+        body.style.paddingTop = headerHeight + 'px';
+    </script>
     <script src="./js/modal.js"></script>
 </body>
 </html>
