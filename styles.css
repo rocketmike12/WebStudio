@@ -599,7 +599,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FFFFFF1A;    ;
+    background-color: #FFFFFF1A;
 }
 
 .footer-join-social-list-link {
@@ -709,7 +709,6 @@ body {
     cursor: pointer;
     transition-property: background-color color;
     transition-duration: 0.4s;
-
 }
 
 .filter-list-btn:hover {
